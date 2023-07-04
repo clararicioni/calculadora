@@ -4,21 +4,22 @@
         <meta charset='utf-8' lang='pt-br'>
         <script type="text/javascript" src="CSS/calc_js.js"></script>
         <link href="CSS/calc_css.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <div class="conteudo-box">
-            <h1 id='title'>Calculadora Online</h1><br>
+            <h1 id='title'>Calculadora</h1><br>
             <div class='main'>
                 <form name='form'> 
                     <input class="textview" name='textview'> <br><br>
-                </form>                  
+                </form>      
                     <table>
                         <td>
                             <input type="button" class='button' onclick='c()' value="C">
-                            <input type="button" class='button' onclick="back()" value="<">
+                            <input type="button" class='buttondelete' onclick="back()" value="<">
                             <input type="button" class='button' onclick="insert('/')" value="/">
-                            <input type="button" class='button' onclick="insert('*')" value="*">
+                            <input type="button" class='button' onclick="insert('*')" value="x">
                         </td>
                         <tr>
                             <td>
@@ -41,7 +42,7 @@
                                 <input type="button" class='button' onclick="insert(1)" value="1">
                                 <input type="button" class='button' onclick="insert(2)" value="2">
                                 <input type="button" class='button' onclick="insert(3)" value="3">
-                                <input type="button" class='button' onclick='equal()' value="=">
+                                <input type="button" class='button' id="igual" onclick='equal()' value="=">
                             </td>
                         </tr>
                         <tr>
@@ -51,8 +52,8 @@
                                 <input type='button' value='.' onclick="insert('.')" class='button' id='n0'>
                             </td>
                         </tr>
-                </form>               
-            </div>
-        </div>
+                    </div>
+                    </div>
+                </form>             
     </body>
 </html>
