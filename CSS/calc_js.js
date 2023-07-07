@@ -1,41 +1,33 @@
 // Acionando os buttons com o teclado utilizando o evento keydown
+
+
+// Todas as funções capturadas pelo Event Listener e seu respectivo id
+const CalcFunctions = {
+    "Enter": "btIgual",
+    "Delete": "btC",
+    "Backspace": "btDelete",
+    ",":"btPonto",
+    "+":"btAdicao",
+    "-":"btSubtrai",
+    "*":"btMultiplica",
+    "/":"btDivisao",
+    "9":"bt9",
+    "8":"bt8",
+    "7":"bt7",
+    "6":"bt6",
+    "5":"bt5",
+    "4":"bt4",
+    "3":"bt3",
+    "2":"bt2",
+    "1":"bt1",
+    "0":"bt0",
+}
+
 document.addEventListener('keydown', function (e) {
-    if (e.key == "Enter") {
-        document.getElementById("btIgual").click();
-    } if (e.key == "Delete") {
-        document.getElementById("btC").click();
-    } if (e.key == "Backspace") {
-        document.getElementById("btDelete").click();
-    } if (e.key == ",") {
-        document.getElementById("btPonto").click();
-    } if (e.key == "+") {
-        document.getElementById("btAdicao").click();
-    } if (e.key == "-") {
-        document.getElementById("btSubtrai").click();
-    } if (e.key == "*") {
-        document.getElementById("btMultiplica").click();
-    } if (e.key == "/") {
-        document.getElementById("btDivisao").click();
-    } if (e.key == "9") {
-        document.getElementById("bt9").click();
-    } if (e.key == "8") {
-        document.getElementById("bt8").click();
-    } if (e.key == "7") {
-        document.getElementById("bt7").click();
-    } if (e.key == "6") {
-        document.getElementById("bt6").click();
-    } if (e.key == "5") {
-        document.getElementById("bt5").click();
-    } if (e.key == "4") {
-        document.getElementById("bt4").click();
-    } if (e.key == "3") {
-        document.getElementById("bt3").click();
-    } if (e.key == "2") {
-        document.getElementById("bt2").click();
-    } if (e.key == "1") {
-        document.getElementById("bt1").click();
-    } if (e.key == "0") {
-        document.getElementById("bt0").click();
+    // verifica se o botão que foi pressionado tem uma função cadastrada no obj CalcFunctions
+    if(e.key in CalcFunctions){
+        // pega a função correspondente de forma dinamica
+        document.getElementById(CalcFunctions[e.key]).click();
     }
 });
 
